@@ -1,0 +1,13 @@
+<svg width="29" height="81" viewBox="0 0 29 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#swmmfioira)" fill-rule="evenodd" clip-rule="evenodd">
+        <path d="M17.678 12C23.906 12 29 17.048 29 23.216V43H0V23.216C0 17.049 5.095 12 11.322 12h6.356zM11.322 67C5.094 67 0 71.234 0 76.407V93h29V76.407C29 71.234 23.905 67 17.678 67h-6.356z" fill="#EFA6A9"/>
+        <path d="M0 26v52h29V26H0z" fill="#E4939A"/>
+        <path d="M0 33v45h29V33H0z" fill="#C0DDFF"/>
+        <path d="M29 43.549 0 61V32h28.976" fill="#4A90E2"/>
+    </g>
+    <defs>
+        <clipPath id="swmmfioira">
+            <path fill="#fff" d="M0 0h29v81H0z"/>
+        </clipPath>
+    </defs>
+</svg>

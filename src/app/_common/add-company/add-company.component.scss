@@ -1,0 +1,141 @@
+.custom-container {
+    padding: 15px;
+    background-color: #292929;
+    border-radius: 15px;
+    color: white;
+
+}
+
+.custom-container2 {
+    padding: 15px;
+    background-color: #ffbc00;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 5px 10px;
+
+    label {
+        color: #292929 !important;
+    }
+
+    button {
+        background-color: #292929;
+        color: #ffbc00;
+        border: none;
+        font-weight: bold;
+    }
+
+}
+
+.custom-container3 {
+    padding: 15px;
+    background-color: #ffbc00;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 5px 10px;
+
+    label {
+        color: #292929 !important;
+    }
+
+    button {
+        background-color: #292929;
+        color: #ffbc00;
+        border: none;
+        font-weight: bold;
+    }
+
+}
+
+input,
+button,
+select {
+    height: 40px;
+}
+
+input,
+textarea,
+span,
+select {
+    background: none;
+    border: 2px solid #7a7a7a;
+    color: #7a7a7a !important;
+    font-weight: bold;
+    outline: none;
+
+}
+
+label {
+    color: #ffbc00;
+    font-weight: bold
+}
+
+
+.header {
+    padding: 10px 5px;
+    border-bottom: 1px solid #ffbc00;
+
+    h3 {
+        float: right;
+    }
+
+    i {
+        float: left;
+        font-size: 15px;
+    }
+}
+
+.survay-button {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    background-color: #ffbc00 !important;
+}
+
+.closes {
+    overflow: hidden;
+    height: 70px;
+    transition: .2s;
+}
+
+.open {
+    height: 450px;
+    transition: .2s;
+
+}
+
+.open2 {
+    height: 300px;
+    transition: .2s;
+
+}
+
+.star {
+    padding: 0 5px;
+    color: red !important;
+    border: none !important;
+}
+
+.date {
+    background-color: white;
+    border: 2px solid #7a7a7a;
+    color: #7a7a7a;
+    font-weight: bold;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.cus {
+    height: 500px;
+}
+
+.button-2 {
+    position: fixed;
+    border: 3px solid lightblue;
+    bottom: 80px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}

@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="container">
+      <div class="form-group">
+        <label for="exampleInputEmail1">نام کاربری</label>
+        <input [(ngModel)]="userName" type="text" class="form-control" id="exampleInputEmail1"
+          aria-describedby="userNameHelp" placeholder="نام کاربری خود را وارد کنید">
+        <small id="userNameHelp" class="form-text">نام کاربری پیش فرض را از ادمین دریافت کنید </small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">رمز عبور </label>
+        <input [(ngModel)]="password" type="password" class="form-control" id="exampleInputEmail1"
+          aria-describedby="emailHelp" placeholder="رمز عبور خود را وارد کنید">
+        <small id="passwordHelp" class="form-text"> رمز عبور پیش فرض را از ادمین دریافت نمایید</small>
+      </div>
+      <div>
+        <button class="btn" (click)="login()">ورود</button>
+      </div>
+    </div>
+  </div>
+</div>
+<notifier-container></notifier-container>

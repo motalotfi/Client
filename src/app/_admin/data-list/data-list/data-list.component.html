@@ -1,0 +1,45 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">نام</th>
+        <th scope="col">نام خانوادگی</th>
+        <th scope="col">جنسیت</th>
+        <th scope="col">شهر</th>
+        <th scope="col">حوزه تخصصی</th>
+        <th scope="col">زمینه فعالیت</th>
+        <th scope="col"> شرکت</th>
+        <th scope="col"> سمت</th>
+        <th scope="col"> مهم ترین محصول</th>
+        <th scope="col"> واردکننده</th>
+        <th scope="col"> تاریخ ورود اطلاعات</th>
+        <th scope="col">عملیات</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of datas;let i">
+        <td>{{item.FirstName}}</td>
+        <td>{{item.LastName}}</td>
+        <td>{{item.Gender}}</td>
+        <td>{{item.CityTitle}}</td>
+        <td>{{item.ActivityField}}</td>
+        <td>{{item.ProficiencyField}}</td>
+        <td>{{item.CompanyName}}</td>
+        <td>{{item.UserPosition}}</td>
+        <td>{{item.LastName}}</td>
+        <td>{{item.DataImporter}}</td>
+        <td>{{item.DataEntryDateTime | ShamsiDate}}</td>
+        <td class="text-center">
+          <button class="btn btn-primary m-2" disabled><i class="fa fa-gear"
+              (click)="edit(item.CompanyId)"></i></button>
+          <button class="btn btn-danger m-2"  (click)="delete(item.CompanyId)"><i
+              class="fa fa-delete-left"></i></button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<notifier-container></notifier-container>

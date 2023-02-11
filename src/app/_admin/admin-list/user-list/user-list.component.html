@@ -1,0 +1,46 @@
+<div class="container">
+  <table class="table my-3">
+    <thead>
+      <h4 class="pb-2">لیست اپراتور ها</h4>
+      <tr>
+        <th scope="col">نام</th>
+        <th scope="col">نام خانوادگی</th>
+        <th scope="col">جنسیت</th>
+        <th scope="col">شماره تماس </th>
+        <th scope="col">عملیات  </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of datas;let i">
+        <td>{{item.FirstName}}</td>
+        <td>{{item.LastName}}</td>
+        <td>{{item.gender}}</td>
+        <td>{{item.MobileNo}}</td>
+        <td class="text-center">
+          <button class="btn btn-primary m-2" disabled><i class="fa fa-gear"></i></button>
+          <button class="btn btn-danger m-2" disabled><i class="fa fa-delete-left"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table my-3">
+    <thead>
+      <h4 class="pb-2">لیست ادمین ها</h4>
+      <tr>
+        <th scope="col">نام</th>
+        <th scope="col">نام خانوادگی</th>
+        <th scope="col">جنسیت</th>
+        <th scope="col">شماره تماس </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of datas2;let i">
+        <td>{{item.FirstName}}</td>
+        <td>{{item.LastName}}</td>
+        <td>{{item.gender}}</td>
+        <td>{{item.MobileNo}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

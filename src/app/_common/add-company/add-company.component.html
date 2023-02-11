@@ -1,0 +1,323 @@
+<div class="container cus">
+  <button style="z-index: 999;" class="button-2 btn btn-primary" (click)="addProductsLength()">افزودن محصول
+    جدید</button>
+
+  <div class="personal-info my-1 custom-container open">
+    <div class="header">
+      <h3 class="text-white d-inline-block">اطلاعات فردی</h3>
+      <i class="i1 fa fa-chevron-down text-white" (click)="infoShowToggle()"></i>
+      <hr>
+
+    </div>
+    <div class="row py-3">
+      <div class="col">
+        <label for="firstName"> نام <span class="star">*</span> </label>
+        <input type="text" [(ngModel)]="data.firstName" class="form-control" placeholder="نام">
+      </div>
+      <div class="col">
+        <label for="lastName">نام خانوادگی <span class="star">*</span></label>
+
+        <input type="text" class="form-control" [(ngModel)]="data.lastName" placeholder="نام خانوادگی">
+      </div>
+      <div class="col">
+        <label for="pohoneNo">شماره موبایل <span class="star">*</span></label>
+
+        <input type="text" class="form-control" [(ngModel)]="data.phoneNo" placeholder="شماره موبایل">
+      </div>
+    </div>
+    <div class="row py-3">
+      <div class=" col form-group">
+        <label for="userUserName"> جنسیت </label><br>
+        <div class="d-flex">
+          <div class="d-flex px-1 align-items-center">
+            <span class="px-1" style="border: none;">مرد </span>
+            <input type="radio" value="1" [(ngModel)]="data.gender">
+          </div>
+          <div class="d-flex px-1 align-items-center">
+            <span class="px-1" style="border: none;">زن </span>
+            <input type="radio" value="0" [(ngModel)]="data.gender">
+          </div>
+        </div>
+
+      </div>
+      <div class="col form-group province">
+        <label for="userUserProvince">استان محل اشتغال</label>
+        <ng-select2 class="loc" [options]='ProviceOption' name='userProvince[]' width='100%' [(ngModel)]='data.province'
+          [data]="userProvinceList" (ngModelChange)="userGetCityList(data.province)">
+        </ng-select2>
+      </div>
+      <div class="col form-group city">
+        <label for="userCity">شهر محل اشتغال</label>
+        <ng-select2 class="loc" [options]='ProviceOption' name='userCity[]' width='100%' [(ngModel)]='data.city'
+          [data]="userCityList">
+        </ng-select2>
+      </div>
+    </div>
+    <div class="row py-3">
+      <div class="col">
+        <label for="degree"> تحصیلات </label>
+
+        <select class="w-100" [(ngModel)]="data.education" id="">
+          <option value="1">زیردپیلم</option>
+          <option value="2">دیپلم</option>
+          <option value="3">لیسانس</option>
+          <option value="4">فوق لیسانس</option>
+          <option value="5">دکتری </option>
+          <option value="6">بالاتر از دکتری </option>
+        </select>
+      </div>
+      <div class="col">
+        <label for="educate"> رشته تحصیلی </label>
+        <input type="text" [(ngModel)]="data.major" class="form-control" placeholder="رشته تحصیلی">
+      </div>
+      <div class="col">
+        <label for="email"> ایمیل </label>
+        <input type="text" [(ngModel)]="data.email" class="form-control" placeholder="ایمیل ">
+      </div>
+    </div>
+    <div class="row py-3">
+      <div class="col form-group city">
+        <label for="userCity">حوزه تخصص </label>
+        <ng-select2 class="loc" [options]='activityOption' name='ProficiencyField[]' width='100%'
+          [(ngModel)]='data.skill' [data]="ProficiencyField">
+        </ng-select2>
+      </div>
+
+      <div class="col form-group city">
+        <label for="userCity">زمینه فعالیت </label>
+        <ng-select2 class="loc" [options]='activityOption' name='ActivityField[]' width='100%'
+          [(ngModel)]='data.activity' [data]="ActivityField">
+        </ng-select2>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="company-info my-2 custom-container open ">
+    <div class="header">
+      <h3 class="text-white d-inline-block">اطلاعات شرکت</h3>
+      <i class="i2 fa fa-chevron-down text-white" (click)="companyShowToggle()"></i>
+      <hr>
+
+    </div>
+
+    <div class="row py-3">
+      <div class="col">
+        <label for="company-name"> نام شرکت/سازمان </label>
+        <input type="text" [(ngModel)]="data.companyName" class="form-control" placeholder=" نام شرکت/سازمان ">
+      </div>
+      <div class="col">
+        <label for="company-pos"> سمت در شرکت/سازمان </label>
+        <input type="text" [(ngModel)]="data.companyPos" class="form-control" placeholder="سمت در شرکت/سازمان  ">
+      </div>
+      <div class="col">
+        <label for="knowledge-base"> شرکت دانش بنیان است؟ </label><br>
+        <div class="d-flex">
+          <div class="d-flex px-1 align-items-center">
+            <span class="px-1" style="border: none;">بله </span>
+            <input type="radio" value="1" [(ngModel)]="data.knowledgeBase">
+          </div>
+          <div class="d-flex px-1 align-items-center">
+            <span class="px-1" style="border: none;">خیر </span>
+            <input type="radio" value="0" [(ngModel)]="data.knowledgeBase">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row py-3">
+      <div class="col">
+        <label for="company-phone"> تلفن ثابت (با کد و بدون هرگونه فاصله)</label>
+
+        <input type="text" class="form-control" [(ngModel)]="data.companyPhone"
+          placeholder=" تلفن ثابت (با کد و بدون هرگونه فاصله)">
+      </div>
+      <div class="col">
+        <label for="company-web">وبسایت</label>
+
+        <input type="text" class="form-control" [(ngModel)]="data.companyWeb" placeholder="وبسایت">
+      </div>
+      <div class="col">
+        <label for="company-birthDay"> سال تاسیس </label>
+
+        <input type="text" class="form-control" [(ngModel)]="data.birthDay" placeholder=" سال تاسیس ">
+      </div>
+      <div class="col">
+        <label for="company-count"> تعداد نیروی انسانی</label>
+        <select class="w-100" [(ngModel)]="data.companyCount" id="">
+          <option value="1">کمتر از 10 نفر</option>
+          <option value="2">10 تا 50 نفر</option>
+          <option value="3">50 تا 150 نفر</option>
+          <option value="4">150 تا 500 نفر </option>
+          <option value="5">بیش از 500 نفر </option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex flex-row ">
+      <div *ngIf="productsLength>0" class="col-12 col-lg-4 product-info pi1 m-2 custom-container open ">
+        <div class="header">
+          <h3 class="text-white d-inline-block">اطلاعات محصول 1</h3>
+          <i class="i3 fa fa-chevron-down text-white" (click)="productShowToggle()"></i>
+          <hr>
+        </div>
+        <div class="row flex-column py-3">
+          <div class="col my-2">
+            <label> مهمترین محصول شرکت/سازمان </label>
+
+            <input type="text" class="form-control" [(ngModel)]="data.importantProduct"
+              placeholder="مهمترین محصول شرکت/سازمان ">
+          </div>
+
+          <div class="col my-2">
+            <label for="userCity">حوزه دانشی محصول </label>
+            <ng-select2 class="loc" [options]='activityOption' name='ProficiencyField[]' width='100%'
+              [(ngModel)]='data.scienceField' [data]="ProficiencyField">
+            </ng-select2>
+          </div>
+          <div class="col">
+            <label> کاربرد این محصول در چه صنایعی است-مشتریان </label>
+
+            <input type="text" [(ngModel)]="data.costumer" class="form-control"
+              placeholder="کاربرد این محصول در چه صنایعی است-مشتریان ">
+          </div>
+
+          <div class="col-12 my-2">
+            <textarea class="form-control" [(ngModel)]="data.descProduct " rows="5"
+              placeholder="خلاصه توضیح کارکرد و ویژگی محصول"></textarea>
+          </div>
+
+        </div>
+      </div>
+      <div *ngIf="productsLength>1" class="col-12 col-lg-4 product-info2 pi2 m-2 custom-container open">
+        <div class="header">
+          <h3 class="text-white d-inline-block">اطلاعات محصول 2</h3>
+          <i class="i4 fa fa-chevron-down text-white" (click)="productShowToggle2()"></i>
+          <hr>
+
+        </div>
+
+        <div class="row flex-column py-3">
+          <div class="col">
+            <label> مهمترین محصول شرکت/سازمان </label>
+
+            <input type="text" class="form-control" [(ngModel)]="data.importantProduct2"
+              placeholder="مهمترین محصول شرکت/سازمان ">
+          </div>
+
+          <div class="col my-2">
+            <label for="userCity">حوزه دانشی محصول </label>
+            <ng-select2 class="loc" [options]='activityOption' name='ProficiencyField[]' width='100%'
+              [(ngModel)]='data.scienceField2' [data]="ProficiencyField">
+            </ng-select2>
+          </div>
+          <div class="col my-2">
+            <label> کاربرد این محصول در چه صنایعی است-مشتریان </label>
+
+            <input type="text" [(ngModel)]="data.costumer2" class="form-control"
+              placeholder="کاربرد این محصول در چه صنایعی است-مشتریان ">
+          </div>
+
+          <div class="col-12 my-2">
+            <textarea class="form-control" [(ngModel)]="data.descProduct2 " rows="5"
+              placeholder="خلاصه توضیح کارکرد و ویژگی محصول"></textarea>
+          </div>
+
+        </div>
+      </div>
+      <div *ngIf="productsLength>2" class="col-12 col-lg-4 product-info3 pi3  m-2 custom-container open">
+        <div class="header">
+          <h3 class="text-white d-inline-block">اطلاعات محصول 3</h3>
+          <i class="i5 fa fa-chevron-down text-white" (click)="productShowToggle3()"></i>
+          <hr>
+
+        </div>
+
+        <div class="row py-3 flex-column">
+          <div class="col">
+            <label> مهمترین محصول شرکت/سازمان </label>
+
+            <input type="text" class="form-control" [(ngModel)]="data.importantProduct3"
+              placeholder="مهمترین محصول شرکت/سازمان ">
+          </div>
+
+          <div class="col my-2">
+            <label for="userCity">حوزه دانشی محصول </label>
+            <ng-select2 class="loc" [options]='activityOption' name='ProficiencyField[]' width='100%'
+              [(ngModel)]='data.scienceField3' [data]="ProficiencyField">
+            </ng-select2>
+          </div>
+          <div class="col my-2">
+            <label> کاربرد این محصول در چه صنایعی است-مشتریان </label>
+
+            <input type="text" [(ngModel)]="data.costumer2" class="form-control"
+              placeholder="کاربرد این محصول در چه صنایعی است-مشتریان ">
+          </div>
+
+          <div class="col-12 my-2">
+            <textarea class="form-control" [(ngModel)]="data.descProduct3" rows="5"
+              placeholder="خلاصه توضیح کارکرد و ویژگی محصول"></textarea>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class=" ">
+    <div class="fixed-bottom custom-container2">
+      <div class="row py-1">
+        <!-- <div class="col">
+          <label>تاریخ ورود اطلاعات</label>
+
+          <div class="date">{{date | ShamsiDate}}</div>
+        </div> -->
+        <!-- <div class="col">
+          <label> واردکننده اطلاعات</label>
+
+          <div class="date">{{user.firstName}} {{user.lastName}}</div>
+        </div> -->
+        <div class="col text-center">
+          <label for="company-count"> .</label>
+
+          <button class=" w-75 btn  btn-info" (click)="save()">ثبت اطلاعات</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<notifier-container></notifier-container>
+
+<!-- <div class="p-py-3">
+  <p-button [icon]="activeState[0] ? 'pi pi-minus' : 'pi pi-plus'" (click)="toggle(0)" styleClass="p-button-text survey-button "
+    label="اطلاعات فردی"></p-button>
+  <p-button [icon]="activeState[1] ? 'pi pi-minus' : 'pi pi-plus'" (click)="toggle(1)" styleClass="p-button-text ml-2"
+    label="اطلاعات شرکت"></p-button>
+  <p-button [icon]="activeState[2] ? 'pi pi-minus' : 'pi pi-plus'" (click)="toggle(2)" styleClass="p-button-text ml-2"
+    label=" اطلاعات محصول"></p-button>
+</div>
+
+<p-accordion>
+  <p-accordionTab header="Header I" [(selected)]="activeState[0]">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+      esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </p-accordionTab>
+  <p-accordionTab header="Header II" [(selected)]="activeState[1]">
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+      aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+      architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+      fugit, sed quia consequuntur magni dolores eos qui ratione
+      voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.</p>
+  </p-accordionTab>
+  <p-accordionTab header="Header III" [(selected)]="activeState[2]">
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+      corrupti quos dolores et quas molestias excepturi sint occaecati
+      cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+      fuga. Et harum quidem rerum facilis est et expedita distinctio.
+      Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
+  </p-accordionTab>
+</p-accordion> -->

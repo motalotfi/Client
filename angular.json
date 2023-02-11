@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -31,9 +34,38 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/bootstrap/css/bootstrap-rtl.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/primeng/resources/primeng.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeng/resources/themes/bootstrap4-light-blue/theme.css",
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/select2/dist/css/select2.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.js",
+              "node_modules/@bit/bitframework/bit.core.js",
+              "node_modules/@bit/jaydata/jaydata.min.js",
+              "node_modules/@bit/jaydata/jaydataproviders/oDataProvider.min.js",
+              "node_modules/@bit/jaydata/jaydataproviders/SqLiteProvider.min.js",
+              "node_modules/@bit/jaydata/jaydataproviders/InMemoryProvider.min.js",
+              "node_modules/@bit/jaydata/jaydataproviders/IndexedDbProvider.min.js",
+              "node_modules/@bit/bitframework/Bit.Model.Context.js",
+              "src/app/Boomrang.Model.Context.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/umd/popper.min.js",
+              "src/assets/bootstrap/js/bootstrap.min.js",
+              "src/assets/js/bootstrap-notify.min.js",
+              "./node_modules/persian-datepicker/dist/js/persian-datepicker.min.js",
+              "./node_modules/persian-date/dist/persian-date.js",
+              "src/assets/js/umd/popper.min.js",
+              "src/assets/bootstrap/js/bootstrap.min.js",
+              "src/assets/js/bootstrap-notify.min.js",
+              "node_modules/select2/dist/js/select2.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -41,12 +73,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "10mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "10mb",
+                  "maximumError": "10mb"
                 }
               ],
               "fileReplacements": [

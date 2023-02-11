@@ -1,0 +1,17 @@
+<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="gtz5vmjj5a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="34" height="34">
+        <path d="M17 34c9.389 0 17-7.611 17-17S26.389 0 17 0 0 7.611 0 17s7.611 17 17 17z" fill="#fff"/>
+    </mask>
+    <g mask="url(#gtz5vmjj5a)">
+        <path d="M17 34c9.389 0 17-7.611 17-17S26.389 0 17 0 0 7.611 0 17s7.611 17 17 17z" fill="#FFCF3F"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0h17v17L0 0z" fill="#F63"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="m0 0 17 17H0V0z" fill="#FFDE7C"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M34 0v17H17L34 0z" fill="#FF76B2"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 0h17L17 17V0z" fill="#DE003D"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17h17L0 34V17z" fill="#B9703D"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 17v17H0l17-17z" fill="#8CC800"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 17h17v17L17 17z" fill="#834AB9"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="m17 17 17 17H17V17z" fill="#4A90E2"/>
+        <path d="M17 21.636a4.636 4.636 0 1 0 0-9.272 4.636 4.636 0 0 0 0 9.272z" fill="#FFCF3F"/>
+    </g>
+</svg>

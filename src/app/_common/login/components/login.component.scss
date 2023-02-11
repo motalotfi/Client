@@ -1,0 +1,38 @@
+.container{
+    background-color:  #353535;
+    border-radius: 8px;
+    width: 400px;
+    padding: 15px;
+    text-align: right;
+    margin-top: 30px;
+}
+.container label{
+    color: #ffbc00;
+    font-weight: bold;
+}
+ small{
+    color: #ffc62a ;
+    opacity: .5;
+    padding-top: 5px;
+}
+input{
+    text-align: right;
+    height: 45px;
+}
+input:focus{
+    outline: 2px solid #ffbc00;
+
+}
+button{
+    background-color: #ffbc00;
+    color: #353535;
+    width: 100%;
+    border:2px solid #ffbc00;
+}
+
+button:hover{
+    background-color: #353535;
+    color: #ffbc00;
+    border:2px solid #ffbc00  !important;
+}
+// 00b3ff  shamsian

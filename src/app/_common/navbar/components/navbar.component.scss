@@ -1,0 +1,36 @@
+.custom-container{
+    background-color: #545454;
+    min-height: 100px;
+}
+.main{
+    position: relative;    
+    padding: 5px 15px;
+}
+.left{
+    position: absolute;
+    left: 0;
+    top: 31px;
+    font-weight: 600px;
+}
+.right{
+    position: absolute;
+    right: 0;
+    top: 17px;
+}
+.user-detail{
+    color: #ffbc00;
+    font-size: 20px;
+}
+.user-detail p{
+    font-weight: bold;
+    display: inline-block;
+}
+.user-detail i{
+    padding-left: 10px;
+}
+.theme{
+    position: absolute;
+}
+.custom-drop{
+    top: 50px;
+}

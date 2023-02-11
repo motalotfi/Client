@@ -1,0 +1,60 @@
+<div class="custom-container container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="main">
+        <div class="right">
+          <div class="logo">
+            <img src="../../../assets/images/logo.png" alt="لوگوی بومرنگ">
+          </div>
+        </div>
+        <div class="left">
+
+
+
+          <div class="" *ngIf="isAdmin">
+            <div class=" btn btn-outline-warning" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <i *ngIf="UserName" class="fa fa-user"></i>
+              <span class="px-3">{{UserName}} </span>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/add-user"> <i class="fa fa-plus"></i> افزودن اپراتور </a>
+              <a class="dropdown-item" href="/add-data"> <i class="fa fa-plus"></i> افزودن دیتا </a>
+              <a class="dropdown-item" href="/data-list"> <i class="fa fa-eye"></i> مشاهده دیتاها</a>
+              <a class="dropdown-item" href="/user-list"> <i class="fa fa-user"></i> مشاهده کاربران </a>
+              <a class="dropdown-item" href="#" (click)="logout()"> <i class="fa fa-exit"></i> خروج</a>
+            </div>
+          </div>
+
+
+          <div class="" *ngIf="!isAdmin">
+            <div class=" btn btn-outline-warning" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <i *ngIf="UserName" class="fa fa-user"></i>
+              <span class="px-3">{{UserName}} </span>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#" (click)="logout()"> <i class="fa fa-exit"></i> خروج</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!-- <div class="">
+          <button *ngIf="isLogin && isAdmin" class="btn btn-outline-warning mx-4  align-self-start">مشاهده لیست
+            دیتا</button>
+          <button *ngIf="isLogin" (click)="logout()" class="btn btn-outline-light mx-4  align-self-start">
+            خروج</button>
+          <button *ngIf="isLogin &&isAdmin" class="btn btn-outline-light mx-4  align-self-start"
+            [routerLink]="['/signup']" routerLinkActive="router-link-active"> افزودن کاربر</button>
+          <button [routerLink]="['/user-add']" routerLinkActive="router-link-active"> افزودن دیتا</button>
+
+
+        </div> -->
+
+      </div>
+    </div>
+  </div>
+</div>

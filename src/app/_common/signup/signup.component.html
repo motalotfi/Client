@@ -1,0 +1,68 @@
+<div class="container">
+  <div class=" main">
+
+    <div class="row">
+      <div class="col-12 col-lg-6">
+
+        <!-- first name -->
+        <div class="form-group">
+            <label for="userFirstName"><span class="text-danger">* </span> نام </label>
+            <input [(ngModel)]="userModel.firstName" type="text" class="form-control text-right" id="userFirstName"
+            placeholder="نام">
+        </div>
+        <!-- lastname -->
+        <div class="form-group">
+          <label for="userLastName"><span class="text-danger">* </span> نام خانوادگی</label>
+          <input [(ngModel)]="userModel.lastName" type="text" class="form-control text-right" id="userLastName"
+            placeholder="نام خانوادگی">
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+          <label for="userUserName"><span class="text-danger">* </span> جنسیت </label><br>
+
+          <input type="radio" value="1" [(ngModel)]="userModel.gender"> مرد
+          <input type="radio" value="0" [(ngModel)]="userModel.gender"> زن
+        </div>
+
+        <!-- phone number -->
+        <div class="form-group">
+          <label for="userPhoneNumber"><span class="text-danger">* </span> شماره تلفن همراه </label>
+          <input ValidNumber="true" [(ngModel)]="userModel.phoneNo" type="text" class="form-control text-right"
+            id="userPhoneNumber" placeholder="شماره تلفن همراه " maxlength="11">
+        </div>
+      </div>
+      <!-- user name -->
+      <div class="col-12 col-lg-6">
+        <div class="form-group">
+          <label for="userUserName"><span class="text-danger">* </span> نام کاربری</label>
+          <input [(ngModel)]="userModel.userName" type="text" class="form-control text-right" id="userUserName"
+            placeholder="نام کاربری">
+        </div>
+        <!-- password -->
+        <div class="form-group  ">
+          <label for="password"><span class="text-danger">* </span> رمز عبور</label>
+          <div class="form-control">
+            <input #passBtn class="passwordBoxInput  text-right w-100" type="password" name="" aria-label=" "
+              aria-describedby="my-addon" [(ngModel)]="userModel.password" id="pass" />
+          </div>
+        </div>
+        <!-- repeat password -->
+        <div class="form-group  ">
+          <label for="userUserName"><span class="text-danger">* </span> تکرار رمز عبور</label>
+
+          <div class="form-control">
+
+            <input #passRepeat [(ngModel)]="userModel.repeatPassword " type="password"
+              class=" passwordBoxInput  text-right w-100 " id="userRepassword" placeholder="تکرار رمز عبور">
+          </div>
+        </div>
+        <div class="col-12 text-center mt-3">
+          <button class="btn btn-warning btn-lg btn" (click)="SingUp()">ثبت نام</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <notifier-container></notifier-container>
